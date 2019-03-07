@@ -1,0 +1,590 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>4. Описание операций</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="jquery.js"></script><script type="text/javascript" src="jquery.syntax.js"></script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><div class="page" role="main">
+<div class="header"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="index.html" title="ГИС-Платформа"><span class="media"><span class="media media-image"><img src="figures_common/logo_mini.png" class="media media-inline" alt=""></span></span></a> » </div></div></div>
+<div class="body">
+<div class="hgroup"><h1 class="title"><span class="title">4. Описание операций</span></h1></div>
+<div class="region">
+<div class="contents"><div class="desc">
+Раздел подробно описывает основные операции, составляющие функциональность программного обеспечения <span class="app">ГИС-Платформа</span>
+</div></div>
+<div id="win_main_without_map" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">4.1. Описание окна работы ПО без карты</span></h2></div>
+<div class="region"><div class="contents">
+<p class="p">Данное окно открывается сразу после запуска программного обеспечения <span class="app">ГИС-Платформа</span> в случае если в конфигурационном файле не прописан файл карты для автоматической загрузки, либо если файл прописан, но в ходе его загрузки произошла ошибка, либо если сам конфигурационный файл отсутствует (например при первоначальном запуске ПО <span class="app">ГИС-Платформа</span>).</p>
+<div class="media media-image"><div class="inner"><img src="figures_common/win_without_map.png" class="media media-block" alt=""></div></div>
+<p class="p">Окно содержит следующие экранные кнопки (в скобках указаны подписи на кнопках для варианта с английской локалью, подробности по работе ПО с различными локалями см. в разделе <span class="link"><a href="preparation.html#local" title="2.6. Локализация ПО ГИС-Платформа">2.6. Локализация ПО <span class="app">ГИС-Платформа</span></a></span>):</p>
+<div class="list"><div class="inner"><div class="region"><ol class="list" style="list-style-type:numbered">
+<li class="list"><p class="p"><span class="gui">Открыть карту</span> (<span class="gui">Open map</span>) — открыть диалог выбора файла карты для загрузки</p></li>
+<li class="list"><p class="p"><span class="gui">Удалить карту</span> (<span class="gui">Remove map</span>) — открыть диалог выбора директории карты для удаления</p></li>
+<li class="list"><p class="p"><span class="gui">Извлечь карты из SXF-архива</span> (<span class="gui">Get map from SXF</span>) — извлечь карты из SXF-архива</p></li>
+<li class="list"><p class="p"><span class="gui">Работа без карты</span> (<span class="gui">Work without map</span>) — продолжить работу без карты (потребуется ввести номер главной зоны Гаусса-Крюгера)</p></li>
+<li class="list"><p class="p"><span class="gui">Помощь</span> (<span class="gui">User Manual</span>) — открыть справку по программе <span class="app">ГИС-Платформа</span></p></li>
+<li class="list"><p class="p"><span class="gui">Собрать карту</span> (<span class="gui">Collect Map</span>) — собрать карту, см. раздел <span class="link"><a href="extras.html#komponowsky" title="6.5. Сборка карты">6.5. Сборка карты</a></span></p></li>
+<li class="list"><p class="p"><span class="gui">Выход</span> (<span class="gui">Quit</span>) — завершить работу с программным обеспечением <span class="app">ГИС-Платформа</span></p></li>
+</ol></div></div></div>
+</div></div>
+</div></div>
+<div id="win_main" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">4.2. Описание окна отображения карты <span class="app">(Главное окно)</span></span></h2></div>
+<div class="region"><div class="contents">
+<p class="p">Окно отображения карты представляет из себя <span class="app">Главное окно</span> программного обеспечения <span class="app">ГИС-Платформа</span>, которое отображается сразу после запуска программного обеспечения при условии, что удалось корректно открыть файл карты, прописанный в конфигурационном файле, либо файл карты был выбран вручную.</p>
+<div class="note note-important" title="Important"><div class="inner"><div class="region"><div class="contents">
+<p class="p">Элементы управления в <span class="app">Главном окне</span> располагаются по четырем сторонам окна.</p>
+<div class="media media-image"><div class="inner"><img src="figures_current_theme/win_main.png" class="media media-block" alt=""></div></div>
+<p class="p">Элементы с каждой из четырех сторон имеют характерные особенности:</p>
+<div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p">Колонка кнопок с левой стороны представляет из себя <span class="app">Главное меню</span> (см. подробное описание в разделе <span class="link"><a href="extras.html#hunity" title="6.1. Принципы работы с Главным меню">6.1. Принципы работы с <span class="app">Главным меню</span></a></span>), т.е. ряд кнопок, по нажатию на каждую из которых на экране появляются новые виджеты, соответствующие смысловому контексту нажатой кнопки (т.е. выбранному режиму работы ПО).</p></li>
+<li class="list"><p class="p">Кнопки в колонке с правой стороны являются так называемыми <span class="app">Правыми кнопками</span>, предназначенными для быстрого доступа к частоиспользуемым функциям ПО <span class="app">ГИС-Платформа</span>. <span class="app">Правые кнопки</span> не зависят от выбранного режима работы ПО.</p></li>
+<li class="list"><p class="p">Виджет сверху представляет из себя так называемый <span class="app">Интерактивный информационный виджет</span> (см. подробное описание в разделе <span class="link"><a href="extras.html#slip" title="6.2. Принципы работы с Интерактивным информационным виджетом">6.2. Принципы работы с <span class="app">Интерактивным информационным виджетом</span></a></span>). Верхний <span class="app">Интерактивный информационный виджет</span> содержит навигационную информацию, в том числе текущие координаты и информацию, получаемую от МНСТО (маршрутно-навигационной системы топопривязки и ориентирования).</p></li>
+<li class="list"><p class="p">Виджет снизу также является <span class="app">Интерактивным информационным виджетом</span> (см. <span class="link"><a href="extras.html#slip" title="6.2. Принципы работы с Интерактивным информационным виджетом">6.2. Принципы работы с <span class="app">Интерактивным информационным виджетом</span></a></span>). Нижний <span class="app">Интерактивный информационный виджет</span> содержит контекстную информацию в зависимости от выбранного в данный момент в <span class="app">Главном меню</span> режима.</p></li>
+</ul></div></div></div>
+</div></div></div></div>
+<p class="p">Ниже по порядку описаны режимы работы, доступные из <span class="app">Главного меню</span> <span class="app">Главного окна</span> ПО.</p>
+</div></div>
+</div></div>
+<div id="mode_angle" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">4.3. Режим поворота карты</span></h2></div>
+<div class="region">
+<div class="contents">
+<p class="p">Режим включается нажатием соответствующей экранной кнопки в <span class="app">Главном меню</span> (см. <span class="link"><a href="extras.html#hunity" title="6.1. Принципы работы с Главным меню">6.1. Принципы работы с <span class="app">Главным меню</span></a></span>).</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h3><span class="title">Кнопка для перехода в <span class="link"><a href="#mode_angle" title="4.3. Режим поворота карты">4.3. Режим поворота карты</a></span></span></h3></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_common/butt_angle.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">После перехода в <span class="link"><a href="#mode_angle" title="4.3. Режим поворота карты">4.3. Режим поворота карты</a></span> оператор может изменить угол поворота карты с помощью появившегося ползунка. Точно установить угол можно с помощью клавиатурных клавиш <span class="key"><kbd>Up</kbd></span> и <span class="key"><kbd>Down</kbd></span>.</p>
+<div class="media media-image"><div class="inner"><img src="figures_current_theme/mode_angle.png" class="media media-block" alt=""></div></div>
+</div>
+<div id="butt_fix_north" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.3.1. Кнопка Фиксировать север</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p"> <span class="link"><a href="#butt_fix_north" title="4.3.1. Кнопка Фиксировать север">4.3.1. Кнопка Фиксировать север</a></span> выключает автоматический поворот карты вслед за транспортным средством, когда нажата <span class="link"><a href="operations.html#butt_ya" title="4.7.4. Кнопка автоцентровки карты">4.7.4. Кнопка автоцентровки карты</a></span>.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_fix_north" title="4.3.1. Кнопка Фиксировать север">4.3.1. Кнопка Фиксировать север</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_fix_north.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+</div>
+</div></div>
+<div id="mode_info" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">4.4. Режим получения информации об объектах</span></h2></div>
+<div class="region">
+<div class="contents">
+<p class="p">Режим включается нажатием соответствующей экранной кнопки в <span class="app">Главном меню</span> (см. <span class="link"><a href="extras.html#hunity" title="6.1. Принципы работы с Главным меню">6.1. Принципы работы с <span class="app">Главным меню</span></a></span>).</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h3><span class="title">Кнопка для перехода в <span class="link"><a href="#mode_info" title="4.4. Режим получения информации об объектах">4.4. Режим получения информации об объектах</a></span></span></h3></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_dialog-information.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">После перехода в <span class="link"><a href="#mode_info" title="4.4. Режим получения информации об объектах">4.4. Режим получения информации об объектах</a></span> оператор может выделить нужный ему объект на карте. Выделенный объект подсвечивается красной рамкой. В нижнем <span class="app">Интерактивном информационном виджете</span> при этом появится краткая характеристика объекта, а также значения его площади и периметра (при условии возможности получения этих значений). Если в выбранной оператором точке находится более одного объекта (вложенных друг в друга, к примеру мост на реке), оператор может выбрать нужный ему объект с помощью экранных кнопок со стрелками.</p>
+<div class="media media-image"><div class="inner"><img src="figures_current_theme/mode_info.png" class="media media-block" alt=""></div></div>
+</div>
+<div id="butt_mark_cur_point" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.4.1. Кнопка выделения текущей точки</span></h3></div>
+<div class="region"><div class="contents">
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_mark_cur_point" title="4.4.1. Кнопка выделения текущей точки">4.4.1. Кнопка выделения текущей точки</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_mark_cur_point.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">Кнопка позволяет включить выделение текущей выбранной на карте точки пиктограммой креста. Текущая точка будет выделяться и после выхода из режима <span class="link"><a href="#mode_info" title="4.4. Режим получения информации об объектах">4.4. Режим получения информации об объектах</a></span>. Указать текущую точку можно двойным нажатием по точке на карте или нажав кнопку <span class="gui">Показать на карте</span> (см. <span class="link"><a href="preferences.html#search" title="5.4. Страница настроек Поиск">5.4. Страница настроек <span class="gui">Поиск</span></a></span>).</p>
+<div class="media media-image"><div class="inner"><img src="figures_common/mark_cur_point.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+<div id="butt_give_location" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.4.2. Кнопка Выставка</span></h3></div>
+<div class="region"><div class="contents">
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_give_location" title="4.4.2. Кнопка Выставка">4.4.2. Кнопка Выставка</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_give_location.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">Кнопка позволяет отправить координаты и высоту текущей точки на устройство, выбранное на <span class="link"><a href="preferences.html#guidance" title="5.5. Страница настроек Курсоуказатель">5.5. Страница настроек <span class="gui">Курсоуказатель</span></a></span> (в том числе на МНСТО, если ПО <span class="app">ГИС-Платформа</span> настроено согласно <span class="link"><a href="preferences.html#guidance_in_mnsto" title="5.5.1 Курсоуказатель в составе МНСТО">5.5.1 Курсоуказатель в составе МНСТО</a></span>).</p>
+<div class="note note-warning" title="Warning"><div class="inner"><div class="region"><div class="contents"><p class="p">Кнопка доступна не во всех вариантах поставки ПО <span class="app">ГИС-Платформа</span>.</p></div></div></div></div>
+<p class="p">Указать текущую точку можно двойным нажатием по точке на карте или нажав кнопку <span class="gui">Показать на карте</span> (см. <span class="link"><a href="preferences.html#search" title="5.4. Страница настроек Поиск">5.4. Страница настроек <span class="gui">Поиск</span></a></span>). Чтобы выделить текущую точку на карте пиктограммой креста, следует включить <span class="link"><a href="#butt_mark_cur_point" title="4.4.1. Кнопка выделения текущей точки">4.4.1. Кнопка выделения текущей точки</a></span>.</p>
+</div></div>
+</div></div>
+</div>
+</div></div>
+<div id="mode_measures" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">4.5. Режим для выполнения измерений</span></h2></div>
+<div class="region">
+<div class="contents">
+<p class="p">Режим включается нажатием соответствующей экранной кнопки в <span class="app">Главном меню</span> (см. <span class="link"><a href="extras.html#hunity" title="6.1. Принципы работы с Главным меню">6.1. Принципы работы с <span class="app">Главным меню</span></a></span>).</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h3><span class="title">Кнопка для перехода в <span class="link"><a href="#mode_measures" title="4.5. Режим для выполнения измерений">4.5. Режим для выполнения измерений</a></span></span></h3></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_measures.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">После перехода в <span class="link"><a href="#mode_measures" title="4.5. Режим для выполнения измерений">4.5. Режим для выполнения измерений</a></span> оператор может выбрать один из подрежимов, нажав на одну из появившихся экранных кнопок, для произведения измерений соответствующего типа.</p>
+<p class="p">Ниже по порядку описаны доступные подрежимы для произведения измерений различных типов.</p>
+</div>
+<div id="" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.5.1. Подрежим для измерения расстояний</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Подрежим включается нажатием соответствующей экранной кнопки из меню <span class="link"><a href="#mode_measures" title="4.5. Режим для выполнения измерений">4.5. Режим для выполнения измерений</a></span>.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title">Кнопка для перехода в подрежим</span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_dist.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">Подрежим служит для измерения расстояний как между двумя произвольными точками на карте, так и для получения суммы расстояний между последовательностью точек. После включения подрежима оператор с помощью выбора указателем нужных ему точек на карте создает последовательность точек, при этом в нижнем <span class="app">Интерактивном информационном виджете</span> будет отображаться сумма расстояний между выбранными точками в порядке их добавления в последовательность.</p>
+<p class="p">При работе в подрежиме для измерения расстояний на экране отображаются значки выбранных точек и линии между точками (согласно последовательности выбора их оператором). Первая точка последовательности помечается значком треугольника, последняя — значком квадрата.</p>
+<p class="p">При добавлении точки в произвольном месте карты точка добавляется в последовательность сразу после последней добавленной точки. Оператор также может добавить точку в произвольное место последовательности выбрав указателем место на карте на линии между двумя выбранными точками (новая точка будет включена в последовательность между ними). Оператор может передвигать выбранные точки на карте. Оператор может удалять точки, передвинув указателем подлежащую удалению точку на соседнюю точку. Сразу после выхода из подрежима последовательность точек удаляется.</p>
+<div class="media media-image"><div class="inner"><img src="figures_current_theme/mode_measure_dis.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+<div id="" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.5.2. Подрежим для измерения площади</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Подрежим включается нажатием соответствующей экранной кнопки из меню <span class="link"><a href="#mode_measures" title="4.5. Режим для выполнения измерений">4.5. Режим для выполнения измерений</a></span>.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title">Кнопка для перехода в подрежим</span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_square.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">Подрежим служит для измерения площади, ограниченной многоугольником, заданным оператором с помощью последовательности точек на карте. После включения подрежима оператор с помощью выбора указателем нужных ему точек на карте создает последовательность точек, при этом в нижнем <span class="app">Интерактивном информационном виджете</span> будет отображаться площадь многоугольника, построенного по точка последовательности.</p>
+<p class="p">При работе в подрежиме для измерения площади на экране отображаются значки выбранных точек, линии между точками (согласно последовательности выбора их оператором), линия между первой и последней добавленными точками, получившийся при этом многоугольник закрашивается белым цветом с эффектом полупрозрачности. Первая точка последовательности помечается значком треугольника, последняя — значком квадрата.</p>
+<p class="p">При добавлении точки в произвольном месте карты точка добавляется в последовательность сразу после последней добавленной точки. Оператор также может добавить точку в произвольное место последовательности выбрав указателем место на карте на линии между двумя выбранными точками (новая точка будет включена в последовательность между ними). Оператор может передвигать выбранные точки на карте. Оператор может удалять точки, передвинув указателем подлежащую удалению точку на соседнюю точку. Сразу после выхода из подрежима последовательность точек удаляется.</p>
+<div class="media media-image"><div class="inner"><img src="figures_current_theme/mode_measure_square.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+<div id="" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.5.3. Подрежим для измерения углов</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Подрежим включается нажатием соответствующей экранной кнопки из меню <span class="link"><a href="#mode_measures" title="4.5. Режим для выполнения измерений">4.5. Режим для выполнения измерений</a></span>.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title">Кнопка для перехода в подрежим</span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_angle.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">Подрежим служит для измерения угла доворота от начальной точки до точки назначения. Оператор последовательно выбирает сначала начальную точку на карте, затем точку назначения. Оператор может передвигать выбранные точки на карте. Оператор также может установить азимутальный угол начальной точки с помощью ползунка в левой части экрана. Точно установить угол можно с помощью клавиатурных клавиш <span class="key"><kbd>Up</kbd></span> и <span class="key"><kbd>Down</kbd></span>.</p>
+<p class="p">При этом в нижнем <span class="app">Интерактивном информационном виджете</span> будут отображаться расчетные параметры, включающие в себя угол доворота на точку назначения, склонение меридиан в начальной точке и расстояние между начальной точкой и точкой назначения. Азимут начальной точки измеряется от 0 до 360 градусов.</p>
+<div class="media media-image"><div class="inner"><img src="figures_current_theme/mode_measure_angle.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+<div id="height" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.5.4. Подрежим для построения Матрицы высот</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Подрежим включается нажатием соответствующей экранной кнопки из меню <span class="link"><a href="#mode_measures" title="4.5. Режим для выполнения измерений">4.5. Режим для выполнения измерений</a></span>.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title">Кнопка для перехода в подрежим</span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_height.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">Подрежим служит для обеспечения данными о высотах в заданном пользователем районе местности. Пользователь задает прямоугольную область на карте местности путем удерживания нажатия на экране, при этом в нижний интерактивный виджет выводятся размеры и площадь выделяемой области.</p>
+<p class="p">После выбора области требуемого размера, программа производит анализ картографической информации в заданной области на наличие объектов типа "Линии уровня", "Тригопункты", а также объекты, содержащие в своей метрике данные о высоте. В результате работы данного подрежима для данной области создается "Матрица высот".</p>
+<p class="p">"Матрица высот" — это массив значений высот имеющий географическую привязку. Разрешение матрицы определяется при построении пропорционально текущему масштабу отображения электронной карты.</p>
+<p class="p">Данные "Матрицы высот" отображаются в виде цветной области, где цвет соответствует определенной высоте. Значения высот приведены по возрастанию в соответствие градиенту цветов от зеленого к красному.</p>
+<p class="p">Если электронная карта в заданной области не имеет достаточного количества объектов требуемых для построения "Матрицы высот", то программа выдаст сообщение об ошибке построения "Матрицы высот".</p>
+<p class="p">Область построения "Матрицы высот" автоматически ограничивается габаритами электронной карты.</p>
+<p class="p">Построенная "Матрица высот" сохраняется в конфигурацию отображения данной электронной карты и при следующем открытии данной электронной карты "Матрица высот" будет отображаться.</p>
+<p class="p">При наведении указателя в область с отображаемой "Матрицой высот" в верхнем интерактивном виджете вместе с координатами отобразится и высота в данной точке.</p>
+<p class="p">При отображении электронной карты с поворотом "Матрица высот" не отображается, данные о высотах в области матрицы остаются.</p>
+<p class="p">Для отключения отображения "Матрица высот" следует перевести кнопку данного режима в выключенное состояние.</p>
+<div class="media media-image"><div class="inner"><img src="figures_current_theme/mode_height.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+<div id="" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.5.5. Подрежим для построения Зоны видимости</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Подрежим включается нажатием соответствующей экранной кнопки из меню <span class="link"><a href="#mode_measures" title="4.5. Режим для выполнения измерений">4.5. Режим для выполнения измерений</a></span>.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title">Кнопка для перехода в подрежим</span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_zone.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">Подрежим служит для обеспечения данными о зоне видимости в заданной точке, с заданным сектором обзора.</p>
+<p class="p">Для построения зоны видимости для конкретного участка местности необходимо, чтобы для этого участка была сформирована "Матрица высот" (см. <span class="link"><a href="#height" title="4.5.4. Подрежим для построения Матрицы высот">4.5.4. Подрежим для построения Матрицы высот</a></span>).</p>
+<p class="p">После перехода в подрежим пользователь должен выбрать точку, для которой будет строиться Зона видимости и направление и радиус сектора обзора. Выбор этой точки, а также направления и радиуса сектора обзора, осуществляется последовательным выбором двух точек на экране с помощью указателя. На месте выбранных указателем точек будут отображены две пиктограммы, соответственно с изображением треугольника и квадрата. Пользователь может отредактировать точки путем перетаскивания указателем этих пиктограмм.</p>
+<div class="media media-image"><div class="inner"><img src="figures_current_theme/mode_view_zone_selection.png" class="media media-block" alt=""></div></div>
+<p class="p">Затем пользователь с помощью ползунка в нижней левой части экрана должен задать ширину сектора обзора в градусах, после чего нажать кнопку построения Зоны видимости.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title">Кнопка построения зоны видимости </span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_view_zone.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">В результате на экране отобразится картина Зоны видимости. Местность, для которой есть ограничения в видимости, будет закрашена синим цветом.</p>
+<div class="media media-image"><div class="inner"><img src="figures_current_theme/mode_view_zone_selected.png" class="media media-block" alt=""></div></div>
+<p class="p">Для отключения отображения "Зоны видимости" следует перевести кнопку данного режима в выключенное состояние.</p>
+</div></div>
+</div></div>
+</div>
+</div></div>
+<div id="mode_route" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">4.6. Режим редактирования маршрута</span></h2></div>
+<div class="region">
+<div class="contents">
+<p class="p">Режим включается нажатием соответствующей экранной кнопки в <span class="app">Главном меню</span> (см. <span class="link"><a href="extras.html#hunity" title="6.1. Принципы работы с Главным меню">6.1. Принципы работы с <span class="app">Главным меню</span></a></span>).</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h3><span class="title">Кнопка для перехода в <span class="link"><a href="#mode_route" title="4.6. Режим редактирования маршрута">4.6. Режим редактирования маршрута</a></span></span></h3></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_route.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">Маршрут представляет из себя последовательность точек (поворотных пунктов), соединенных линиями. Оператор может осуществлять движение по маршруту (см. <span class="link"><a href="#butt_follow_route" title="4.7.5. Кнопка движения по маршруту">4.7.5. Кнопка движения по маршруту</a></span>), при этом пройденные точки будут закрашиваться серым цветом. Маршрут может быть сохранен оператором в файл в рабочей директории ПО <span class="app">ГИС-Платформа</span>, а также загружен из ранее сохраненного файла. При этом статус каждой точки (т.е. была ли она пройдена в рамках движения по маршруту) сохраняется в файле.</p>
+<p class="p">При добавлении точки в произвольном месте карты точка добавляется в последовательность сразу после последней добавленной точки. Оператор также может добавить точку в произвольное место последовательности выбрав указателем место на карте на линии между двумя выбранными точками (новая точка будет включена в последовательность между ними). Оператор может передвигать выбранные точки на карте. Оператор может удалять точки, передвинув указателем подлежащую удалению точку на соседнюю точку.</p>
+<p class="p">В нижнем <span class="app">Интерактивном информационном виджете</span> выводится общая длина маршрута.</p>
+<div class="media media-image"><div class="inner"><img src="figures_current_theme/mode_measure_route.png" class="media media-block" alt=""></div></div>
+<p class="p">Ниже по порядку описаны кнопки, доступные в режиме редактирования маршрута.</p>
+</div>
+<div id="butt_route_open" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.6.1. Кнопка открытия файла маршрута</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет загрузить сохраненный ранее в файл маршрут.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_route_open" title="4.6.1. Кнопка открытия файла маршрута">4.6.1. Кнопка открытия файла маршрута</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_document-open.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">При нажатии на кнопку будет вызван диалог выбора файла маршрута:</p>
+<div class="media media-image"><div class="inner"><img src="figures_common/route_open_dialog.png" class="media media-block" alt=""></div></div>
+<p class="p">Загруженный маршрут заменит собой редактируемый в данный момент.</p>
+</div></div>
+</div></div>
+<div id="butt_route_save" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.6.2. Кнопка сохранения маршрута</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет сохранить текущий редактируемый маршрут в файл.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_route_save" title="4.6.2. Кнопка сохранения маршрута">4.6.2. Кнопка сохранения маршрута</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_document-save.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">По умолчанию выбор имени маршрута осуществляется на основе значений текущих даты и времени. При этом пользователю предоставляется возможность отредактировать имя маршрута перед его сохранением:</p>
+<div class="media media-image"><div class="inner"><img src="figures_common/route_edit_name.png" class="media media-block" alt=""></div></div>
+<p class="p">Файл маршрута сохраняется в рабочую директорию ПО <span class="app">ГИС-Платформа</span>. Файлу присваивается расширение <span class="file">.route</span>.</p>
+</div></div>
+</div></div>
+<div id="butt_user_trash" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.6.3. Кнопка удаления файла маршрута</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет войти в режим "Удаление файла маршрута".</p>
+<p class="p">Режим предназначен для удаления файлов маршрутов(расширение <span class="file">.route</span>) или файлов трасс (расширение <span class="file">.trace</span>). При активации данного режима наэкране появится диалок в котором необходимо указать файл маршрута или трассы подлежащий удалению. Внимание: данное действие необратимо! При нажатии клавиши ОК происходит удаление указанного файла, принажатии Отмена - выход из режима.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_user_trash" title="4.6.3. Кнопка удаления файла маршрута">4.6.3. Кнопка удаления файла маршрута</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_user-trash.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+<div id="butt_route_clear" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.6.4. Кнопка очистки маршрута</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет удалить все поворотные пункты текущего редактируемого маршрута.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_route_clear" title="4.6.4. Кнопка очистки маршрута">4.6.4. Кнопка очистки маршрута</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_clear_all.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+<div id="butt_route_thin" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.6.5. Кнопка объединения близко расположенных поворотных пунктов маршрута</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет объединить поворотные пункты текущего редактируемого маршрута, находящиеся на расстоянии меньшем, чем зона чувствительности поворотного пункта (т.е. зона, при вхождении транспортного средства в которую, данный поворотный пункт считается пройденным).</p>
+<p class="p">Процесс объединения представляет собой последовательное сравнение расстояний от каждого поворотного пункта до поворотных пунктов соседних с ним.</p>
+<p class="p">Данный режим актуален после совершения прокладки маршрута с привязкой к линейным объектам (см. <span class="link"><a href="#butt_route_attract" title='4.6.8. Кнопка "притягивания" маршрута к линейному объекту'>4.6.8. Кнопка "притягивания" маршрута к линейному объекту</a></span>).</p>
+<p class="p">Результат работы данного режима необратим — точки, объединенные в результате его работы восстановлению не подлежат.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_route_thin" title="4.6.5. Кнопка объединения близко расположенных поворотных пунктов маршрута">4.6.5. Кнопка объединения близко расположенных поворотных пунктов маршрута</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_thin.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+<div id="butt_route_reverse" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.6.6. Кнопка инвертирования порядка следования поворотных пунктов</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет инвертировать порядок следования поворотных пунктов, т.е. произвести движение по текущему маршруту в обратном направлении.</p>
+<p class="p">при вызове данного режима информация о пройденных поворотных пунктах не сохраняется.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_route_reverse" title="4.6.6. Кнопка инвертирования порядка следования поворотных пунктов">4.6.6. Кнопка инвертирования порядка следования поворотных пунктов</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_route_reverse.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+<div id="butt_route_next" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.6.7. Кнопка пропуска поворотного пункта</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет пропустить текущий активный поворотный пункт и переключить процесс навигации на следующий. Если маршрут уже пройден полностью, то навигация по данному маршруту начнется заново (все точки вновь будут отмечены как непройденные).</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_route_next" title="4.6.7. Кнопка пропуска поворотного пункта">4.6.7. Кнопка пропуска поворотного пункта</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_jump_to_next.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+<div id="butt_route_attract" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.6.8. Кнопка "притягивания" маршрута к линейному объекту</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет включить режим, при котором прокладка маршрута будет осуществляться с "притягиванием" к линейному объекту карты.</p>
+<p class="p">При задании точек маршрута производится анализ карты на предмет нахождения указанной точки вблизи линейного объекта (например автомагистрали, грунтовой дороги и т.д.).</p>
+<p class="p">Если вблизи указанной точки будет найден линейный объект, то маршрут на данную точку будет проложен по найденному линейному объекту.</p>
+<p class="p">Если же объект не найден, то точка добавляется в конец маршрута без каких-либо дополнений.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_route_attract" title='4.6.8. Кнопка "притягивания" маршрута к линейному объекту'>4.6.8. Кнопка "притягивания" маршрута к линейному объекту</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_route_attract.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+<div id="butt_route_bar" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.6.9. Кнопка подсвета препятствий</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет включить режим подсвета препятствий на пути следования заданного маршрута.</p>
+<p class="p">Препятствием считается любой площадной объект электронной карты (например леса, озера, реки и т.д).</p>
+<p class="p">Подсвет препятствий производится путем отображения поверх линии маршрута отрезков, соединяющих точки пересечения маршрута и площадного объекта.</p>
+<p class="p">При включении данного режима оператор, имея информацию о препятствиях на пути следования, может отредактировать маршрут с целью объезда указанных препятствий.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_route_bar" title="4.6.9. Кнопка подсвета препятствий">4.6.9. Кнопка подсвета препятствий</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_highlight_bar.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+<div id="butt_route_ends" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.6.10. Кнопка скрытия промежуточных поворотных пунктов</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет скрыть промежуточные поворотные пункты и показывать только первый и последний. Что особенно актуально при больших масштабах, когда при высокой плотности поворотных пунктов значки для их обозначения могут сливаться друг с другом.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_route_ends" title="4.6.10. Кнопка скрытия промежуточных поворотных пунктов">4.6.10. Кнопка скрытия промежуточных поворотных пунктов</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_route_show_checkpoints.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+<div id="butt_route_undo" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.6.11. Кнопка отмены последнего действия</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет последнее действие при редактировании маршрута. Отмене подлежат действия связанные с добавлением, удалением одного поворотного пункта, очисткой всего маршрута, прокладка маршрута с притягиванием к линейному объекту.</p>
+<p class="p">Действие объединение близко расположенных поворотных пунктов не отменяется.</p>
+<p class="p">Повторное нажатие на кнопку позволяет вернуть последнее совершенное действие.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_route_undo" title="4.6.11. Кнопка отмены последнего действия">4.6.11. Кнопка отмены последнего действия</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_edit-undo.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+<div id="butt_route_remove_last" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.6.12. Кнопка удаления последнего поворотного пункта</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет удалить последнюю точку в последовательности точек текущего редактируемого маршрута.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_route_remove_last" title="4.6.12. Кнопка удаления последнего поворотного пункта">4.6.12. Кнопка удаления последнего поворотного пункта</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_remove_last_dot.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+<div id="butt_auto_route" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.6.13. Кнопка автоматической прокладки маршрута</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка включает режим режим автоматической маршрутизации.</p>
+<div class="note note-warning" title="Warning"><div class="inner"><div class="region"><div class="contents"><p class="p">Режим доступен не во всех вариантах поставки ПО <span class="app">ГИС-Платформа</span>.</p></div></div></div></div>
+<p class="p">Для работы режима необходимо задать минимум две контрольные точки, между которыми предполагается совершить марш. Точки можно задать непосредственно указав их на электронной карте (п.п.), либо через меню "Поиска".</p>
+<p class="p">После задания контрольных точек необходимо войти в режим "Автоматической маршрутизации". При расчете маршрута используется дополнительный пользовательский слой - "Граф дорого". Этот слой может быть добален к электронной карте на время рачетов (при наличии заранее подготовленных слоя "Граф дорог" на диске), либо создан  по электронной карте на район, задаваеммый контрольными точками маршрута (созданный "Граф дорог" хранится в директории программы). После активации режима "Автоматической маршрутизации", на экране появится диалог, который предлогает пользователю "Создать или добавить "Граф дорог" к электронной карте для рачета маршрута",  предлагается несколько вариантов действий с "Графом дорог":</p>
+<div class="list"><div class="inner"><div class="region"><ol class="list" style="list-style-type:numbered">
+<li class="list"><p class="p">Добавить - в этом случае "Граф дорог" добавляется к электронной карте из директории, в которой находится заренее подготовленные данный. В диалоге выбора файла Пользователь выбирает директорию с данными и указывает соответствующий файл расширения SIT. В случае если указанный файл не является "Графом дорог" программа выдаст предупреждениеи "Указанный файл не является "Графом дорог", после чего произойдет выход из режима.</p></li>
+<li class="list">
+<p class="p">Создать - в этом случае происходит анализ области, определяемой контрольными точками маршрута на предмет наличия слоя электронной карты "Дорожная сеть". При наличии указанного слоя происходит поиск соответствующих объкектов: автодороги, автомагистрали, автошоссе и т.д., далее программа, используя метрику найденных обектов создает "Граф дорог" и добавляет к электронной карте при его успешном создании для последущего использования. Создание "Графа дорог" по электронной карте накладывает определенные требования к картографическим данным:</p>
+<p class="p">а) Наличие слоя "Дорожная сеть".</p>
+<p class="p">б) Обекты дорожной сети должны быть связаны - не должно быть разрывов, обязательное наличие развязок и перекрестков.</p>
+</li>
+<li class="list"><p class="p">Использовать предыдущий - в этом случае для рачсета маршрута используется "Граф дорог" указанный ранее (ранее добавленный или созданный). При первом использовании режима автоматической маршрутизации действие неактивно.</p></li>
+<li class="list"><p class="p">Отменить - в этом случае происходит выход из режима.</p></li>
+</ol></div></div></div>
+<p class="p">После успешного создания или добавления "Графа дорог" к электронной происходит расчет кратчайшего маршрута между контрольными точками по дорогам. При невозможности расчета программа выдост предуперждение. В случае если область, которую охватывают контрольные точки выходит за границы "Графа дорог", расчет маршрута по дорогам производится только в области "Графа дорог".</p>
+<p class="p">При успешном выполнении расчета на экране отобразится созданный маршрут в режиме неотображения ППМ. С данным маршруто можно совершать все теже действия что и с обычным: добавление/удаление ППМ, сохранение и т.д.</p>
+<p class="p">При активации режима "Отмена последнего действия" происходит отмена добавления рачетных точек маршрута и остаются только контрольные, при повторной активации режима происходит добавление рачетных точек маршрута.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_auto_route" title="4.6.13. Кнопка автоматической прокладки маршрута">4.6.13. Кнопка автоматической прокладки маршрута</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_auto_route.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+<div id="butt_route_obj_attract" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.6.14. Кнопка притягиваня объекта к маршруту</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет включить режим "Притягиваня к маршруту".</p>
+<p class="p">Режим "Притягиваня к маршруту" предназначен для искусственного притягивания транспортного средства к маршруту при нахождении транспортного средства на удалении от линии маршрута меньшем чем треть зоны чувствительности ППМ. Режим может быть актуален для компенсации ошибок навигации - при движении по маршруту, проложенному по автостраде, т.е. при физическом нахождении транспортного средства на автостраде, ошибка навигации "отбрасывает" транспортное средство от реального местоположения на некоторое расстояние. При включении режима происходит притягивание транспортного средства к линии маршрута, при отключении - транспортное средство отображается в соответствии с принятыми координатами. Работа режима не затрагивает режим записи пройденного пути, не изменяет отображаемых координат транспортного средства и влияет только на визуальное отображение транспортного средства.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_route_obj_attract" title="4.6.14. Кнопка притягиваня объекта к маршруту">4.6.14. Кнопка притягиваня объекта к маршруту</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_route_obj_attract.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+</div>
+</div></div>
+<div id="right_buttons" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">4.7. Правые кнопки</span></h2></div>
+<div class="region">
+<div class="contents">
+<p class="p">Кнопки в колонке с правой стороны являются так называемыми <span class="app">Правыми кнопками</span> (см. более подробное описание в разделе <span class="link"><a href="#win_main" title="4.2. Описание окна отображения карты (Главное окно)">4.2. Описание окна отображения карты <span class="app">(Главное окно)</span></a></span>).</p>
+<p class="p">Ниже по порядку описаны все <span class="app">Правые кнопки</span> <span class="app">Главного окна</span> ПО.</p>
+</div>
+<div id="butt_mnsto" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.7.1. Кнопка включения получения информации от МНСТО</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка включает получение информации от МНСТО (маршрутно-навигационной системы топопривязки и ориентирования).</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_mnsto" title="4.7.1. Кнопка включения получения информации от МНСТО">4.7.1. Кнопка включения получения информации от МНСТО</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_sat.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">При активации данной кнопки полученная от МНСТО информация выводится в верхнем <span class="app">Интерактивном информационном виджете</span>. Информация от МНСТО используется также для определения собственного местоположения, поэтому <span class="link"><a href="#butt_ya" title="4.7.4. Кнопка автоцентровки карты">4.7.4. Кнопка автоцентровки карты</a></span> отображается на экране только если активна <span class="link"><a href="#butt_mnsto" title="4.7.1. Кнопка включения получения информации от МНСТО">4.7.1. Кнопка включения получения информации от МНСТО</a></span>.</p>
+<p class="p">В случае, если данные от МНСТО перестали поступать (например из-за разъединения кабеля), изображение на кнопке будет окрашено красным цветом:</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title">Индикация отсутствия данных от МНСТО</span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_sat_fail.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">Отсутствие данных от МНСТО определяется по прекращению обновления значений секунд.</p>
+</div></div>
+</div></div>
+<div id="butt_zoom-in" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.7.2. Кнопка увеличения масштаба</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет увеличить текущий масштаб отображения карты.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_zoom-in" title="4.7.2. Кнопка увеличения масштаба">4.7.2. Кнопка увеличения масштаба</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_zoom-in.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+<div id="butt_zoom-out" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.7.3. Кнопка уменьшения масштаба</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка позволяет уменьшить текущий масштаб отображения карты.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_zoom-out" title="4.7.3. Кнопка уменьшения масштаба">4.7.3. Кнопка уменьшения масштаба</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_zoom-out.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+<div id="butt_ya" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.7.4. Кнопка автоцентровки карты</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка включает автоматическую центровку карты исходя из собственного местоположения, т.е. точка с текущими собственными координатами автоматически устанавливается в центр экрана <span class="app">Главного окна</span>. При изменении собственных координат ПО <span class="app">ГИС-Платформа</span> соответствующим образом автоматически сдвигает карту.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_ya" title="4.7.4. Кнопка автоцентровки карты">4.7.4. Кнопка автоцентровки карты</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_ya.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p"><span class="link"><a href="#butt_ya" title="4.7.4. Кнопка автоцентровки карты">4.7.4. Кнопка автоцентровки карты</a></span> отображается на экране только если активна <span class="link"><a href="#butt_mnsto" title="4.7.1. Кнопка включения получения информации от МНСТО">4.7.1. Кнопка включения получения информации от МНСТО</a></span>, т.к. для автоцентровки карты необходима информация о собственном местоположении, получаемая от МНСТО.</p>
+</div></div>
+</div></div>
+<div id="butt_follow_route" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.7.5. Кнопка движения по маршруту</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка включает процесс навигации по текущему маршруту. Для редактирования текущего маршрута и загрузки данных маршрута из файла служит <span class="link"><a href="#mode_route" title="4.6. Режим редактирования маршрута">4.6. Режим редактирования маршрута</a></span>.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_follow_route" title="4.7.5. Кнопка движения по маршруту">4.7.5. Кнопка движения по маршруту</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_follow_route.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">Направление на следующий поворотный пункт отображается на экране с помощью синей линии. При уменьшении до определенного значения (см. <span class="link"><a href="preferences.html#map" title="5.1. Страница настроек Карта">5.1. Страница настроек <span class="gui">Карта</span></a></span>) расстояния от текущего местоположения до следующего поворотного пункта, данный поворотный пункт считается пройденным, закрашивается серым и навигация далее производится к поворотному пункту, следующему за только что пройденным. При достижении последнего пункта маршрута, маршрут считается пройденным и навигация по нему прекращается.</p>
+<div class="media media-image"><div class="inner"><img src="figures_current_theme/follow_route.png" class="media media-block" alt=""></div></div>
+<p class="p">При движении по маршруту в верхнем <span class="app">Интерактивном информационном виджете</span> выводятся расстояние до следующего поворотного пункта (<span class="gui">S_1</span>) и расстояние, которое предстоит преодолеть для достижения последней точки текущего маршрута (<span class="gui">S_2</span>).</p>
+</div></div>
+</div></div>
+<div id="butt_way_rec" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.7.6. Кнопка записи текущего маршрута</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка включает режим записи и отображения пройденного пути.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_way_rec" title="4.7.6. Кнопка записи текущего маршрута">4.7.6. Кнопка записи текущего маршрута</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_way_rec.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">Данный режим служит для сохранения в памяти пути пройденного объектом. При этом пройденный путь отображается на экране в виде тонкой линии.</p>
+<p class="p">Данные пройденного пути записываются в файл с расширением .trace в директорию где хранятся файлы маршрутов. Формат файла пройденного пути идентичен формату файла маршрута, поэтому файл пройденного пути можно в полной мере использовать как файл маршрута.</p>
+<p class="p">Режим включается автоматически при включении получения данных от МНСТО с помощью кнопки <span class="link"><a href="#butt_mnsto" title="4.7.1. Кнопка включения получения информации от МНСТО">4.7.1. Кнопка включения получения информации от МНСТО</a></span>. Для отключения записи и отображения пройденного пути следует перевести кнопку данного режима в выключенное состояние.</p>
+<div class="media media-image"><div class="inner"><img src="figures_current_theme/way_rec.png" class="media media-block" alt=""></div></div>
+<p class="p"><span class="link"><a href="#butt_way_rec" title="4.7.6. Кнопка записи текущего маршрута">4.7.6. Кнопка записи текущего маршрута</a></span> отображается на экране только если активна <span class="link"><a href="#butt_mnsto" title="4.7.1. Кнопка включения получения информации от МНСТО">4.7.1. Кнопка включения получения информации от МНСТО</a></span>.</p>
+</div></div>
+</div></div>
+<div id="butt_pref" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.7.7. Кнопка для вызова <span class="app">Окна конфигурирования</span></span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Кнопка служит для вызова <span class="app">Окна конфигурирования</span> ПО <span class="app">ГИС-Платформа</span>.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#butt_pref" title="4.7.7. Кнопка для вызова Окна конфигурирования">4.7.7. Кнопка для вызова <span class="app">Окна конфигурирования</span></a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/butt_preferences-system.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">Работа с <span class="app">Окном конфигурирования</span> ПО <span class="app">ГИС-Платформа</span> подробно описана в разделе <span class="link"><a href="preferences.html" title="5. Конфигурирование ПО ГИС-Платформа">5. Конфигурирование ПО ГИС-Платформа</a></span>.</p>
+</div></div>
+</div></div>
+</div>
+</div></div>
+<div id="map_flash" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">4.8. Загрузка карт с USB-накопителя</span></h2></div>
+<div class="region">
+<div class="contents">
+<p class="p">ПО <span class="app">ГИС-Платформа</span> позволяет загружать картографическую информацию с USB-накопителя, подключенного к ЭВМ.</p>
+<div class="note note-warning" title="Warning"><div class="inner"><div class="region"><div class="contents"><p class="p">Для автоматического обнаружения подключения USB-накопителей при запуске ПО <span class="app">ГИС-Платформа</span> должен быть передан соответствующий параметр командной строки, см. <span class="link"><a href="preparation.html#params" title="2.3. Параметры командной строки">2.3. Параметры командной строки</a></span>.</p></div></div></div></div>
+<p class="p">При подключении USB-накопителя ПО <span class="app">ГИС-Платформа</span> производит анализ файлов на USB-накопителе на предмет наличия файлов-паспортов картографических данных (<span class="file">*.map</span>, <span class="file">*.sit</span>) и файлов в обменном формате картографической информации (<span class="file">*.sxf</span>).</p>
+<div class="note note-warning" title="Warning"><div class="inner"><div class="region"><div class="contents">
+<p class="p">Требования для корректной загрузки картографической информации с USB-накопителя:</p>
+<div class="list"><div class="inner"><div class="region"><ol class="list" style="list-style-type:numbered">
+<li class="list"><p class="p">USB-накопитель должен быть отформатирован в файловую систему, поддерживаемую операционной системой ЭВМ, и содержать один (primary) раздел.</p></li>
+<li class="list"><p class="p">Картографическая информация располагается в директории на USB-накопителе.</p></li>
+<li class="list"><p class="p">Директория с картографической информацией должна располагаться в корне файловой системы USB-накопителя.</p></li>
+<li class="list"><p class="p">На USB-накопители может располагаться только одна директория с файлом-паспортом картографической информации или со списком SXF-архивов (в текстовом формате с расширением <span class="file">.dir</span>).</p></li>
+<li class="list"><p class="p">Название файлов должны содержать только символы латинского алфавита и символы подчеркивания.</p></li>
+</ol></div></div></div>
+<p class="p">Пример dir-файла:</p>
+<div class="code"><pre class="contents ">DIR
+NAME Podolsk
+100t97g.RSC
+N37016.sxf
+N37017.sxf
+N31589.sxf</pre></div>
+</div></div></div></div>
+</div>
+<div id="map_flash_mapfile" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.8.1. Загрузка map-файла с USB-накопителя</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">В случае обнаружения файла-паспорта картографической информации высвечивается окно.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#map_flash_mapfile" title="4.8.1. Загрузка map-файла с USB-накопителя">4.8.1. Загрузка map-файла с USB-накопителя</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_common/map_open_question.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">Оператору предоставляется несколько вариантов работы с картографической информацией:.</p>
+<div class="list"><div class="inner"><div class="region"><ol class="list" style="list-style-type:numbered">
+<li class="list"><p class="p">Если установить галочку в поле "Скопировать на диск" и нажать кнопку "Да", то данные с USB-накопителя будут скопированы на диск ЭВМ и открыты для работы.</p></li>
+<li class="list"><p class="p">Если нажать "Да" при снятой галочке в поле "Скопировать на диск", то данные, находящиеся на USB-накопителе, будут открыты без копирования на диск.</p></li>
+<li class="list"><p class="p">Если нажать "Нет" при установленной галочке в поле "Скопировать на диск", данные с USB-накопителя будут скопированы на диск без открытия данных, а оператор продолжит работать с картой, открытой до монтирования USB-накопителя.</p></li>
+<li class="list"><p class="p">Если нажать "Нет" при снятой галочке в поле "Скопировать на диск", никаких действий с данными на USB-накопителе производиться не будет.</p></li>
+</ol></div></div></div>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title">Карта, загруженная с USB-накопителя</span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_current_theme/map_open_done.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+</div></div>
+</div></div>
+<div id="map_flash_sxf" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">4.8.2. Загрузка карты из SXF-архива с USB-накопителя</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">В случае обнаружения файла в в формате SXF (обменный формат картографической информации), высвечивается окно.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h4><span class="title"><span class="link"><a href="#map_flash_sxf" title="4.8.2. Загрузка карты из SXF-архива с USB-накопителя">4.8.2. Загрузка карты из SXF-архива с USB-накопителя</a></span></span></h4></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_common/map_open_sxf_question.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<p class="p">Оператору предоставляется несколько вариантов работы с файлом SXF:</p>
+<div class="list"><div class="inner"><div class="region"><ol class="list" style="list-style-type:numbered">
+<li class="list"><p class="p">Если установить галочку в поле "Открыть поле загрузки" и нажать кнопку "Да", данные с USB-накопителя будут загружены на диск и открыты для работы.</p></li>
+<li class="list"><p class="p">Если нажать Нажав "Да" при снятой галочке в поле "Скопировать на диск", данные, находящиеся на USB-накопителе, будут загружены на диск без открытия.</p></li>
+<li class="list"><p class="p">Если нажать "Нет" никаких действий с данными на USB-накопителе производиться не будет.</p></li>
+</ol></div></div></div>
+</div></div>
+</div></div>
+</div>
+</div></div>
+<div id="hotkeys" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">4.9. Клавиши быстрого доступа</span></h2></div>
+<div class="region"><div class="contents">
+<p class="p">Клавиши F1-F5 на клавиатуре служат для быстрого доступа к ряду функций ПО <span class="app">ГИС-Платформа</span>:</p>
+<div class="list"><div class="inner"><div class="region"><ol class="list" style="list-style-type:numbered">
+<li class="list"><p class="p"><span class="gui">F1</span> — позволяет вызвать справку по ПО <span class="app">ГИС-Платформа</span>;</p></li>
+<li class="list"><p class="p"><span class="gui">F2</span> — позволяет вызвать диалог загрузки карт;</p></li>
+<li class="list"><p class="p"><span class="gui">F3</span> — позволяет вызвать диалог загрузки маршрута;</p></li>
+<li class="list"><p class="p"><span class="gui">F4</span> — позволяет отмасштабировать карту, уместив ее целиком в окне ПО <span class="app">ГИС-Платформа</span>;</p></li>
+<li class="list"><p class="p"><span class="gui">F5</span> — позволяет последовательно переключать систему координат ("Гаусс-Крюгер"/"Гаусс-Крюгер смежная зона"/"СК-42 градусы, минуты, секунды", см. также <span class="link"><a href="preferences.html#view_settings" title="5.2.3. Вкладка Настройки просмотра">5.2.3. Вкладка <span class="gui">Настройки просмотра</span></a></span>).</p></li>
+</ol></div></div></div>
+</div></div>
+</div></div>
+<div class="sect sect-links" role="navigation">
+<div class="hgroup"></div>
+<div class="contents"><div class="links guidelinks"><div class="inner">
+<div class="title"><h2><span class="title">More Information</span></h2></div>
+<div class="region"><ul><li class="links "><a href="index.html" title="ГИС-Платформа">ГИС-Платформа</a></li></ul></div>
+</div></div></div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="footer"></div>
+</div></body>
+</html>

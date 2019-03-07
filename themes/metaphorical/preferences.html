@@ -1,0 +1,206 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>5. Конфигурирование ПО ГИС-Платформа</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="jquery.js"></script><script type="text/javascript" src="jquery.syntax.js"></script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><div class="page" role="main">
+<div class="header"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="index.html" title="ГИС-Платформа"><span class="media"><span class="media media-image"><img src="figures_common/logo_mini.png" class="media media-inline" alt=""></span></span></a> » </div></div></div>
+<div class="body">
+<div class="hgroup"><h1 class="title"><span class="title">5. Конфигурирование ПО ГИС-Платформа</span></h1></div>
+<div class="region">
+<div class="contents">
+<div class="desc">Раздел описывает возможности <span class="app">Окна конфигурирования</span> ПО <span class="app">ГИС-Платформа</span>.</div>
+<p class="p"><span class="app">Окно конфигурирования ПО</span> <span class="app">ГИС-Платформа</span> открывается из <span class="app">Главного окна</span> (см. раздел <span class="link"><a href="operations.html#win_main" title="4.2. Описание окна отображения карты (Главное окно)">4.2. Описание окна отображения карты <span class="app">(Главное окно)</span></a></span>) по нажатию экранной кнопки <span class="link"><a href="operations.html#butt_pref" title="4.7.7. Кнопка для вызова Окна конфигурирования">4.7.7. Кнопка для вызова <span class="app">Окна конфигурирования</span></a></span>.</p>
+<p class="p"><span class="app">Окно конфигурирования</span> делится на несколько страниц, в свою очередь каждая из которых может содержать несколько вкладок настроек. Переключение между страницами настроек осуществляется нажатием соответствующих экранных кнопок, расположенных вертикально в левой части <span class="app">окна конфигурирования</span>. В нижней правой части окна расположены следующие экранные кнопки:</p>
+<div class="list"><div class="inner"><div class="region"><ol class="list" style="list-style-type:numbered">
+<li class="list"><p class="p"><span class="gui">Предпросмотр</span> — позволяет временно скрыть виджеты конфигурирования, чтобы посмотреть карту;</p></li>
+<li class="list"><p class="p"><span class="gui">Закрыть</span> — позволяет закрыть <span class="app">окно конфигурирования</span>.</p></li>
+</ol></div></div></div>
+<p class="p">Ниже по порядку описаны страницы <span class="app">Окна конфигурирования</span> ПО <span class="app">ГИС-Платформа</span>.</p>
+</div>
+<div id="map" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">5.1. Страница настроек <span class="gui">Карта</span></span></h2></div>
+<div class="region"><div class="contents">
+<p class="p">В поле <span class="gui">Открытая карта</span> отображается название открытого в данный момент файла трассы, включая путь к нему в файловой системе относительно каталога с картами ПО <span class="app">ГИС-Платформа</span>.</p>
+<p class="p">Справа от поля <span class="gui">Открытая карта</span> расположены две кнопки:</p>
+<div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p">Кнопка <span class="gui">Открыть карту</span> позволяет открыть новый файл карты;</p></li>
+<li class="list"><p class="p">Кнопка <span class="gui">Закрыть карту</span> позволяет закрыть текущий файл карты. При этом будет открыто окно работы ПО без карты (см. <span class="link"><a href="operations.html#win_main_without_map" title="4.1. Описание окна работы ПО без карты">4.1. Описание окна работы ПО без карты</a></span>)</p></li>
+</ul></div></div></div>
+<p class="p">Список в нижней части страницы настроек содержит листы текущей карты с их координатами. Оператор может выбрать лист в списке и отобразить именно его в окне просмотра карты с помощью кнопки <span class="gui">Показать на карте</span>.</p>
+<p class="p">Элемент управления <span class="gui">Зона чувствительности точки маршрута</span> позволяет настроить радиус (в метрах) вокруг точки маршрута, при пересечении которого она считается пройденной.</p>
+<p class="p">Элемент управления <span class="gui">Толщина линии маршрута</span> позволяет настроить толщину (в пикселях) для линий отображения маршрутов.</p>
+<div class="media media-image"><div class="inner"><img src="figures_common/pref_map.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+<div id="view" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">5.2. Страница настроек <span class="gui">Вид</span></span></h2></div>
+<div class="region">
+<div class="contents">
+<p class="p"><span class="link"><a href="#view" title="5.2. Страница настроек Вид">5.2. Страница настроек <span class="gui">Вид</span></a></span> содержит три вкладки с настройками отображения карты.</p>
+<p class="p">Ниже по порядку описаны вкладки данной страницы настроек.</p>
+</div>
+<div id="" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">5.2.1. Вкладка <span class="gui">Слои</span></span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">На данной вкладке оператор может выбрать слои, которые необходимо отображать на карте. Список слоев берется из файла карты. Колонка <span class="gui">Слой</span> списка содержит названия слоев, колонка <span class="gui">Статус</span> содержит управляющие графические элементы, с помощью которых оператор может включить или выключить отображение каждого из слоев.</p>
+<div class="media media-image"><div class="inner"><img src="figures_common/pref_view_layers.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+<div id="" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">5.2.2. Вкладка <span class="gui">Объекты</span></span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">На данной вкладке оператор может выбрать типы объектов, которые необходимо отображать на карте. Список типов объектов берется из файла карты. Колонка <span class="gui">Объект</span> списка содержит названия типов объектов, колонка <span class="gui">Статус</span> содержит управляющие графические элементы, с помощью которых оператор может включить или выключить отображение каждого из типов объектов.</p>
+<div class="media media-image"><div class="inner"><img src="figures_common/pref_view_objects.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+<div id="view_settings" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">5.2.3. Вкладка <span class="gui">Настройки просмотра</span></span></h3></div>
+<div class="region"><div class="contents">
+<p class="p"><span class="link"><a href="#view_settings" title="5.2.3. Вкладка Настройки просмотра">5.2.3. Вкладка <span class="gui">Настройки просмотра</span></a></span> позволяет настраивать следующие параметры отображения карты:</p>
+<div class="list"><div class="inner"><div class="region"><ol class="list" style="list-style-type:numbered">
+<li class="list"><p class="p"><span class="gui">Система координат</span> — в выпадающем списке оператор может выбрать систему координат</p></li>
+<li class="list"><p class="p"><span class="gui">Схематическое изображение</span> — включает режим схематического отображения карты</p></li>
+<li class="list"><p class="p"><span class="gui">Не показывать карту</span> — выключает отображение карты</p></li>
+<li class="list"><p class="p"><span class="gui">Ночной режим карты</span> — включает ночной режим отображение карты, то есть режим с цветовой схемой, оптимизированной под работу в помещении (транспортном средстве) с низким уровнем освещения</p></li>
+<li class="list"><p class="p"><span class="gui">Отобразить сетку</span> — включает отображение прямоугольной, масштабируемой сетки с шагом 1000 метров</p></li>
+<li class="list"><p class="p"><span class="gui">Цвет фона</span> — позволяет установить цвет фона карты</p></li>
+<li class="list"><p class="p"><span class="gui">Кнопка <span class="media"><span class="media media-image"><img src="figures_common/pref_view_butt_reload.png" class="media media-inline" alt=""></span></span></span> — позволяет вернуть цвет фона карты к цвету по умолчанию</p></li>
+<li class="list"><p class="p"><span class="gui">Яркость</span> — позволяет настроить параметр яркости при отображении карты</p></li>
+<li class="list"><p class="p"><span class="gui">Контраст</span> — позволяет настроить параметр контраста при отображении карты</p></li>
+</ol></div></div></div>
+<div class="media media-image"><div class="inner"><img src="figures_common/pref_view_settings.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+<div id="run_settings" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">5.2.4. Вкладка <span class="gui">Настройки запуска</span></span></h3></div>
+<div class="region"><div class="contents">
+<div class="note note-warning" title="Warning"><div class="inner"><div class="region"><div class="contents"><p class="p">Данная вкладка доступна только в режиме работы <span class="app">ГИС-Платформы</span> с активными дополнительными настройками. Чтобы запустить ПО в таком режиме нужно при запуске передать опцию командной строки <span class="cmd">--advanced_pref</span> (или <span class="cmd">-a</span>).</p></div></div></div></div>
+<p class="p"><span class="link"><a href="#run_settings" title="5.2.4. Вкладка Настройки запуска">5.2.4. Вкладка <span class="gui">Настройки запуска</span></a></span> позволяет настраивать следующие параметры ПО <span class="app">ГИС-Платформа</span>:</p>
+<div class="list"><div class="inner"><div class="region"><ol class="list" style="list-style-type:numbered">
+<li class="list"><p class="p"><span class="gui">Язык интерфейса</span> — в выпадающем списке оператор может выбрать язык интерфейса ПО <span class="app">ГИС-Платформа</span></p></li>
+<li class="list"><p class="p"><span class="gui">Стиль кнопок</span> — в выпадающем списке оператор может выбрать стиль иконок на кнопках (параметр здесь имеет приоритет ниже, чем параметр <span class="cmd">-i</span> в <span class="link"><a href="preparation.html#params" title="2.3. Параметры командной строки">2.3. Параметры командной строки</a></span>)</p></li>
+</ol></div></div></div>
+<p class="p">Параметры, указанные на данной вкладке, вступают в силу только после перезапуска ПО.</p>
+<div class="media media-image"><div class="inner"><img src="figures_common/pref_run_settings.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+</div>
+</div></div>
+<div id="gpsd" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">5.3. Страница настроек <span class="gui">Преобразование навигационных данных</span></span></h2></div>
+<div class="region">
+<div class="contents">
+<div class="note note-warning" title="Warning"><div class="inner"><div class="region"><div class="contents"><p class="p">Данная страница настроек доступна только в режиме работы <span class="app">ГИС-Платформы</span> с активными дополнительными настройками. Чтобы запустить ПО в таком режиме нужно при запуске передать опцию командной строки <span class="cmd">--advanced_pref</span> (или <span class="cmd">-a</span>).</p></div></div></div></div>
+<p class="p"><span class="link"><a href="#gpsd" title="5.3. Страница настроек Преобразование навигационных данных">5.3. Страница настроек <span class="gui">Преобразование навигационных данных</span></a></span> позволяет включить или выключить преобразование навигационных данных для системной службы gpsd, полученных с подключенного к ЭВМ устройства, а также позволяет изменять параметры преобразования данных. Подробней о механизме работы преобразования см. <span class="link"><a href="extras.html#gpsd" title="6.3. Преобразование навигационных данных">6.3. Преобразование навигационных данных</a></span>.</p>
+<p class="p">Для включения и отключения преобразования навигационных данных служит управляющий графический элемент <span class="gui">Включить преобразование</span>.</p>
+<p class="p">В верхней части страницы в поле ввода <span class="gui">Прием</span> указывается устройство, с которого осуществляется получение навигационных данных (МНСТО).</p>
+<p class="p">В полях ввода <span class="gui">IP-адрес</span> и <span class="gui">порт</span> указываются соответственно адрес и порт, по которым принимает соединения системная служба gpsd.</p>
+<p class="p">В поле ввода <span class="gui">Плагин</span> указывается плагин (имя файла плагина) с реализацией механизма конвертации данных от подключенного устройства. Поле ввода содержит выпадающий список с именами файлов плагинов. Список составляется автоматически на основе содержимого каталога <span class="file">~/.local/lib/gis_platform/gpsd_converter_plugins/</span> (где под <span class="file">~</span> подразумевается путь к домашнему каталогу пользователя в терминологии <span class="app">GNU/Linux</span>). Кнопка <span class="gui">Обновить</span> справа от поля ввода позволяет обновить этот список (повторно получить информацию о содержимом каталога с плагинами).</p>
+<p class="p">Для вступления в силу заданных оператором параметров преобразования навигационных данных следует нажать экранную кнопку <span class="gui">Применить</span>.</p>
+<div class="media media-image"><div class="inner"><img src="figures_common/pref_gpsd_converter.png" class="media media-block" alt=""></div></div>
+</div>
+<div id="send_to_mnsto" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">5.3.1 Пересылка курсоуказания в МНСТО</span></h3></div>
+<div class="region"><div class="contents"><p class="p">ПО <span class="app">ГИС-Платформа</span> дает возмможность не только принимать даннные из МНСТО, но и отправлять любые данные в МНСТО. Для этого данные нужно отправить на UDP-порт 1993, они будут автоматически переправлены в МНСТО. В случае курсоуказателя, встроенного в МНСТО, эту возможность следует использовать для пересылки данных курсоуказателя в МНСТО (см. <span class="link"><a href="preferences.html#guidance_in_mnsto" title="5.5.1 Курсоуказатель в составе МНСТО">5.5.1 Курсоуказатель в составе МНСТО</a></span>).</p></div></div>
+</div></div>
+</div>
+</div></div>
+<div id="search" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">5.4. Страница настроек <span class="gui">Поиск</span></span></h2></div>
+<div class="region">
+<div class="contents">
+<p class="p"><span class="link"><a href="#search" title="5.4. Страница настроек Поиск">5.4. Страница настроек <span class="gui">Поиск</span></a></span> позволяет осуществлять поиск объектов на карте по различным параметрам. Поиск по различным параметрам осуществляется соответственно на вкладках <span class="gui">По имени</span>, <span class="gui">По координатам</span>, <span class="gui">По приращению</span>, <span class="gui">По углу</span> и <span class="gui">Точка маршрута</span>.</p>
+<p class="p">Для ввода названия (части названия) объекта, координат, приращений, азимута предназначена экранная клавиатура (п.п.).</p>
+<p class="p">После выбора нужного оператору объекта из списка при поиске на вкладке <span class="gui">По имени</span> или <span class="gui">Точка маршрута</span> или после ввода параметров для поиска объекта в других вкладках оператор может нажать экранную кнопку <span class="gui">Показать на карте</span>, в результате чего на карте будет отображен нужный оператору объект, либо нажать экранную клавишу <span class="gui">Проложить маршрут к точке</span>, в результате чего к маршруту будет добавлена точка с координатами объекта, соответствующего заданным пользователем параметрам.</p>
+</div>
+<div id="search by name" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">5.4.1 Поиск по имени</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">При поиске по имени результатом поиска служит список объектов, удовлетворяющих критериям запроса. В списке оператор может выбрать нужный ему объект и показать его на карте или добавить в качестве поворотного пункта маршрута.</p>
+<div class="media media-image"><div class="inner"><img src="figures_common/pref_search_name.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+<div id="search by coords" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">5.4.2 Поиск по координатам</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Режим предназначен для поиска точек по координатам введенным пользователем.</p>
+<p class="p">Ввод координат осуществляется в одной из выбранных систем координат:</p>
+<div class="list"><div class="inner"><div class="region"><ol class="list" style="list-style-type:numbered">
+<li class="list"><p class="p">Гаусс-Крюгер (метры)</p></li>
+<li class="list"><p class="p">Гаусс-Крюгер смежная зона(метры)</p></li>
+<li class="list"><p class="p">СК-42 (градусы, минуты, секунды)</p></li>
+<li class="list"><p class="p">WGS-84 (градусы, минуты, секунды)</p></li>
+<li class="list"><p class="p">ПЗ-90 (градусы, минуты, секунды)</p></li>
+</ol></div></div></div>
+<div class="media media-image"><div class="inner"><img src="figures_common/pref_search_coord_xy.png" class="media media-block" alt=""></div></div>
+<div class="media media-image"><div class="inner"><img src="figures_common/pref_search_coord_bl.png" class="media media-block" alt=""></div></div>
+<p class="p">Заданные оператором координаты могут быть использованы для относительного поиска (режим выносной точки). Зафиксировав координаты точки с помощью кнопки <span class="gui">Использовать точку как выносную</span>, оператор может произвести поиск в режимах "По приращению" и "По углу" относительно зафиксированной точки.</p>
+</div></div>
+</div></div>
+<div id="search by increment" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">5.4.3 Поиск по приращению</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Режим предназначен для поиска по приращениям по соответствующам осям относительно заданной точки.</p>
+<p class="p">По умолчанию заданной считается точка с координатами центра отображаемого фрагмента карты. Оператор может задать выносную точку, задав ее в режиме "Поиска по координатам". </p>
+<div class="media media-image"><div class="inner"><img src="figures_common/pref_search_increment.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+<div id="search by angle" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">5.4.4 Поиск по углу</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Режим предназначен для поиска по значениям азимута или дирекционного улга и дальности относительно заданной точки.</p>
+<p class="p">По умолчанию заданной считается точка с координатами центра отображаемого фрагмента карты. Оператор может задать выносную точку, задав ее в режиме "Поиска по координатам". </p>
+<div class="media media-image"><div class="inner"><img src="figures_common/pref_search_angle.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+<div id="route point" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">5.4.5 Точка маршрута</span></h3></div>
+<div class="region"><div class="contents">
+<p class="p">Режим предназначен для поиска точки маршрута. Во вкладке располагается список всех точек текущего маршрута. Оператор может осуществить поиск нужной ему точки рабочего маршрута.</p>
+<div class="media media-image"><div class="inner"><img src="figures_common/pref_search_point.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+</div>
+</div></div>
+<div id="guidance" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">5.5. Страница настроек <span class="gui">Курсоуказатель</span></span></h2></div>
+<div class="region">
+<div class="contents">
+<div class="note note-warning" title="Warning"><div class="inner"><div class="region"><div class="contents"><p class="p">Данная страница настроек доступна только в режиме работы <span class="app">ГИС-Платформы</span> с активными дополнительными настройками. Чтобы запустить ПО в таком режиме нужно при запуске передать опцию командной строки <span class="cmd">--advanced_pref</span> (или <span class="cmd">-a</span>).</p></div></div></div></div>
+<p class="p"><span class="link"><a href="#guidance" title="5.5. Страница настроек Курсоуказатель">5.5. Страница настроек <span class="gui">Курсоуказатель</span></a></span> позволяет включить или выключить отправку навигационных данных на курсоуказатель транспортного средства, а также позволяет изменять параметры работы с курсоуказателем.</p>
+<p class="p">Для включения и отключения отправки навигационных данных служит управляющий графический элемент <span class="gui">Включить курсоуказатель</span>.</p>
+<p class="p">Ниже в том же окне оператор может выбрать способ отправки данных: отправка данных на устройство, подключенное к ЭВМ, на которой работает ПО (<span class="gui">Отправка на устройство</span>), либо отправка по сети с помощью UDP-сообщений (<span class="gui">Отправка по UDP</span>). В случае отправки на устройство можно выбрать файл устройства (поле <span class="gui">Устройство</span>), в случае отправки навигационных данных по сети можно выбрать адрес и порт принимающей стороны (поля <span class="gui">IP-адрес</span> и <span class="gui">порт</span>).</p>
+<p class="p">Для вступления в силу заданных оператором параметров работы с курсоуказателем следует нажать экранную кнопку <span class="gui">Применить</span>.</p>
+<div class="media media-image"><div class="inner"><img src="figures_common/pref_guidance.png" class="media media-block" alt=""></div></div>
+</div>
+<div id="guidance_in_mnsto" class="sect"><div class="inner">
+<div class="hgroup"><h3 class="title"><span class="title">5.5.1 Курсоуказатель в составе МНСТО</span></h3></div>
+<div class="region"><div class="contents"><p class="p">Если курсоуказатель является частью МНСТО и использует для связи с ПО <span class="app">ГИС-Платформа</span> тот же самый физический порт, то следует настроить курсоуказатель на пересылку данных в МНСТО. Для этого на <span class="link"><a href="#guidance" title="5.5. Страница настроек Курсоуказатель">5.5. Страница настроек <span class="gui">Курсоуказатель</span></a></span> следует выбрать опцию <span class="gui">Отправка по UDP</span>, указать <span class="gui">IP-адрес</span> <span class="gui">127.0.0.1</span> и <span class="gui">порт</span> <span class="gui">1993</span> (см. <span class="link"><a href="preferences.html#send_to_mnsto" title="5.3.1 Пересылка курсоуказания в МНСТО">5.3.1 Пересылка курсоуказания в МНСТО</a></span>).</p></div></div>
+</div></div>
+</div>
+</div></div>
+<div id="quit" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">5.6. Страница настроек <span class="gui">Выход</span></span></h2></div>
+<div class="region"><div class="contents">
+<p class="p">Страница содержит экранную кнопку <span class="gui">Выход</span>, позволяющую завершить работу с программным обеспечением <span class="app">ГИС-Платформа</span>.</p>
+<div class="media media-image"><div class="inner"><img src="figures_common/pref_exit.png" class="media media-block" alt=""></div></div>
+</div></div>
+</div></div>
+<div class="sect sect-links" role="navigation">
+<div class="hgroup"></div>
+<div class="contents"><div class="links guidelinks"><div class="inner">
+<div class="title"><h2><span class="title">More Information</span></h2></div>
+<div class="region"><ul><li class="links "><a href="index.html" title="ГИС-Платформа">ГИС-Платформа</a></li></ul></div>
+</div></div></div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="footer"></div>
+</div></body>
+</html>

@@ -1,0 +1,139 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>2. Подготовка к работе</title>
+<link rel="stylesheet" type="text/css" href="C.css">
+<script type="text/javascript" src="jquery.js"></script><script type="text/javascript" src="jquery.syntax.js"></script><script type="text/javascript" src="yelp.js"></script>
+</head>
+<body><div class="page" role="main">
+<div class="header"><div class="trails" role="navigation"><div class="trail">
+<a class="trail" href="index.html" title="ГИС-Платформа"><span class="media"><span class="media media-image"><img src="figures_common/logo_mini.png" class="media media-inline" alt=""></span></span></a> » </div></div></div>
+<div class="body">
+<div class="hgroup"><h1 class="title"><span class="title">2. Подготовка к работе</span></h1></div>
+<div class="region">
+<div class="contents"></div>
+<div id="" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">2.1. Установка программного обеспечения <span class="app">ГИС-Платформа</span></span></h2></div>
+<div class="region"><div class="contents">
+<p class="p">ПО <span class="app">ГИС-Платформа</span> поставляется в виде самораспаковывающегося sh-архива, файла с контрольной суммой сборки (hash-файл) и md5-файлом.</p>
+<p class="p">Hash-файл содержит уникальную контрольную сумму сборки ПО, которая также выводится на экран, если при запуске ПО <span class="app">ГИС-Платформа</span> был передан соответствующий параметр командной строки, см. <span class="link"><a href="preparation.html#params" title="2.3. Параметры командной строки">2.3. Параметры командной строки</a></span>. Эта контрольная сумма может быть использована для сверки версии установленного ПО.</p>
+<p class="p">Md5-файл служит для проверки корректности (физической целостности) самораспаковывающего архива и hash-файла.</p>
+<p class="p">Для установки ПО <span class="app">ГИС-Платформа</span> в систему следует запустить sh-файл в интерпретаторе shell от имени пользователя системы, который затем будет работать с ПО <span class="app">ГИС-Платформа</span>:</p>
+<div class="screen"><pre class="contents "><span class="output">$ </span><span class="input">sh 'ИМЯ_SH-ФАЙЛА'.sh</span>
+<span class="output">Verifying archive integrity... All good.
+Uncompressing gis_platform............
+Installing plugin(s)
+Please, type root password!
+Пароль:</span>
+  </pre></div>
+<p class="p">В ходе установки будет запрошен пароль пользователя root для установки в систему deb-пакетов с ПО.</p>
+<p class="p">Корректность установочного sh-файла можно проверить, сравнив контрольную сумму в md5-файле из поставки ПО <span class="app">ГИС-Платформа</span> с контрольной суммой самого установочного sh-архива, полученной с помощью команды <span class="app">md5sum</span>:</p>
+<div class="screen"><pre class="contents "><span class="output">$ </span><span class="input">cat 'ИМЯ_SH-ФАЙЛА'.md5</span>
+<span class="output">686c1d8caaa065a886a9f0f3ed0082ca bin/'ИМЯ_SH-ФАЙЛА'.sh</span>
+<span class="output">$ </span><span class="input">md5sum 'ИМЯ_SH-ФАЙЛА'.sh</span>
+<span class="output">686c1d8caaa065a886a9f0f3ed0082ca</span>
+	</pre></div>
+<p class="p">Аналогично можно проверить корректность hash-файла, сравнив котрольную сумму в md5-файле с контрольной суммой, полученной от команды md5sum.</p>
+</div></div>
+</div></div>
+<div id="" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">2.2. Запуск программного обеспечения <span class="app">ГИС-Платформа</span></span></h2></div>
+<div class="region"><div class="contents">
+<p class="p">Программное обеспечение <span class="app">ГИС-Платформа</span> запускается из командной строки командой <span class="cmd">gis_platform</span> без параметров.</p>
+<p class="p">Запуск с параметром командной строки <span class="cmd">-h</span> позволяет отобразить список всех поддерживаемых параметров командной строки:</p>
+<div class="screen"><pre class="contents "><span class="prompt output">$ </span><span class="input">gis_platform  -h</span>
+<span class="output">Использование:
+  gis_platform [ПАРАМЕТР...] - GIS Platform
+
+Параметры справки:
+  -h, --help                     Показать параметры справки
+
+Параметры приложения:
+  -2, --2d                       Force 2D rendering (turn off hardware acceleration everywhere)
+  -3, --3d                       Force 3D rendering (turn on hardware acceleration everywhere)
+  -a, --advanced_pref            Show advanced preferences
+  -c, --compact                  Start in compact size
+  -g, --debug_gpsd_converter     Debug messages between gpsd converter threads and from converter plugin
+  -t, --draw_texts               Draw texts by cairo
+  -f, --fullscreen               Start in fullscreen mode
+  -u, --hide_cursor              Hide cursor (usefull for iPad TM)
+  -i, --icons_theme              Icons theme (or 'list' to get list of available themes)
+  -m, --mount_detection          Turn on mount detections of disks (experimental)
+  -e, --set_time_of_day          Set system time of day
+  -q, --shutdown_pc_on_quit      Shutdown PC on quit
+  -s, --signature                Print build id and signature
+  -v, --version                  Display version information
+  -w, --without_map              Ignore map from config</span></pre></div>
+<p class="p">Подробнее аргументы командной строки рассмотрены в разделе <span class="link"><a href="#params" title="2.3. Параметры командной строки">2.3. Параметры командной строки</a></span></p>
+</div></div>
+</div></div>
+<div id="params" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">2.3. Параметры командной строки</span></h2></div>
+<div class="region"><div class="contents"><div class="list"><div class="inner"><div class="region"><ul class="list">
+<li class="list"><p class="p"><span class="cmd">-h</span> или <span class="cmd">--help</span> — отобразить подсказку по параметрам командной строки</p></li>
+<li class="list"><p class="p"><span class="cmd">-2</span> или <span class="cmd">--2d</span> — форсировать 2D рендеринг (полностью отключить аппаратное ускорение)</p></li>
+<li class="list"><p class="p"><span class="cmd">-3</span> или <span class="cmd">--3d</span> — форсировать 3D рендеринг (включить везде, где возможно, аппаратное ускорение)</p></li>
+<li class="list"><p class="p"><span class="cmd">-a</span> или <span class="cmd">--advanced_pref</span> — расширенный вид настроек (доступны настройки конвертера и курсоуказателя)</p></li>
+<li class="list"><p class="p"><span class="cmd">-c</span> или <span class="cmd">--compact</span> — запустить ПО в компактном режиме</p></li>
+<li class="list"><p class="p"><span class="cmd">-g</span> или <span class="cmd">--debug_gpsd_converter</span> — включить отладочный режим, при котором сообщения между потоками gpsd конвертера печатаются на стандартный вывод, а также включаются отладочные сообщения в плагине преобразования навигационных данных (см. <span class="link"><a href="extras.html#gpsd" title="6.3. Преобразование навигационных данных">6.3. Преобразование навигационных данных</a></span>)</p></li>
+<li class="list"><p class="p"><span class="cmd">-t</span> или <span class="cmd">--draw_texts</span> — рисовать тексты на карте с помощью cairo (может исправить отображение текстов на нестандартных картах)</p></li>
+<li class="list"><p class="p"><span class="cmd">-f</span> или <span class="cmd">--fullscreen</span> — запустить ПО в полноэкранном режиме</p></li>
+<li class="list"><p class="p"><span class="cmd">-u</span> или <span class="cmd">--hide_cursor</span> — скрыть курсор (рекомендуется при использовании ПО <span class="app">ГИС-Платформа</span> на планшетном компьютере)</p></li>
+<li class="list"><p class="p"><span class="cmd">-i</span> или <span class="cmd">--icons_theme</span> — имя темы иконок (можно передать слово 'list' вместо имени, для получения списка всех доступных тем; параметр имеет приоритет выше, чем настройки в <span class="link"><a href="preferences.html#run_settings" title="5.2.4. Вкладка Настройки запуска">5.2.4. Вкладка <span class="gui">Настройки запуска</span></a></span>)</p></li>
+<li class="list"><p class="p"><span class="cmd">-m</span> или <span class="cmd">--mount_detection</span> — обнаруживать подключаемые к ЭВМ сменные носители данных для загрузки карт с них</p></li>
+<li class="list"><p class="p"><span class="cmd">-e</span> или <span class="cmd">--set_time_of_day</span> — устанавливать системное время ЭВМ согласно времени, полученному от МНСТО</p></li>
+<li class="list"><p class="p"><span class="cmd">-q</span> или <span class="cmd">--shutdown_pc_on_quit</span> — выключать ЭВМ при выходе из ПО <span class="app">ГИС-Платформа</span>, см. <span class="link"><a href="#shutdown_pc" title="2.5. Выключение ЭВМ при выходе из ПО">2.5. Выключение ЭВМ при выходе из ПО</a></span></p></li>
+<li class="list"><p class="p"><span class="cmd">-s</span> или <span class="cmd">--signature</span> — вывести на стандартный вывод цифровую подпись сборки, см. <span class="link"><a href="extras.html#signature" title="6.4. Цифровая подпись сборки">6.4. Цифровая подпись сборки</a></span></p></li>
+<li class="list"><p class="p"><span class="cmd">-v</span> или <span class="cmd">--version</span> — вывести информацию о версии ПО и контрольную hash-сумму на стандартный вывод</p></li>
+<li class="list"><p class="p"><span class="cmd">-w</span> или <span class="cmd">--win_without_map</span> — открыть ПО без карты (игнорировать карту, прописанную в конфигурационном файле)</p></li>
+</ul></div></div></div></div></div>
+</div></div>
+<div id="autostart" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">2.4. Автозапуск ПО <span class="app">ГИС-Платформа</span></span></h2></div>
+<div class="region"><div class="contents">
+<p class="p">Для автозапуска ПО <span class="app">ГИС-Платформа</span> следует скопировать файл <span class="file">/usr/share/applications/gis_platform.desktop</span> в каталог <span class="file">~/.config/autostart</span> в домашнем каталоге пользователя, при входе которого в систему, будет автоматически запускаться ПО <span class="app">ГИС-Платформа</span>.</p>
+<p class="p">В скопированном файле можно добавить необходимые параметры командной строки (см. <span class="link"><a href="#params" title="2.3. Параметры командной строки">2.3. Параметры командной строки</a></span>) к исполняемому файлу <span class="cmd">/usr/bin/gis_platform</span> в поле <span class="cmd">Exec</span>. Например, параметр <span class="cmd">-f</span> для запуска ПО в полноэкранном режиме.</p>
+<div class="note note-warning" title="Warning"><div class="inner"><div class="region"><div class="contents"><p class="p">Для работы данного способа автозапуска необходимо, чтобы операционная система соответствовала спецификации <span class="app">FreeDesktop</span>.</p></div></div></div></div>
+</div></div>
+</div></div>
+<div id="shutdown_pc" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">2.5. Выключение ЭВМ при выходе из ПО</span></h2></div>
+<div class="region"><div class="contents">
+<p class="p">ПО <span class="app">ГИС-Платформа</span> по завершении работы может подавать операционной системе команду на выключение ЭВМ. Для этого ПО <span class="app">ГИС-Платформа</span> следует запускать с параметром командной строки <span class="cmd">-q</span> (см. <span class="link"><a href="#params" title="2.3. Параметры командной строки">2.3. Параметры командной строки</a></span>). При этому будет запущена команда <span class="cmd">sudo -n /sbin/halt</span>. Для успешного выполнения данной команды пользователю, от имени которого запущено ПО, должно быть разрешено выполнять <span class="cmd">/sbin/halt</span> посредством <span class="cmd">sudo</span> без запроса пароля. Чтобы разрешить пользователю данное действие, следует от имени суперпользователя запустить команду <span class="cmd">visudo</span> и в открывшемся на редактирование файле добавить строку вида:</p>
+<div class="code"><pre class="contents ">user	ALL=(ALL) NOPASSWD: /sbin/halt</pre></div>
+<p class="p">Где <span class="app">user</span> — имя пользователя, который работает с ПО <span class="app">ГИС-Платформа</span></p>
+</div></div>
+</div></div>
+<div id="local" class="sect"><div class="inner">
+<div class="hgroup"><h2 class="title"><span class="title">2.6. Локализация ПО <span class="app">ГИС-Платформа</span></span></h2></div>
+<div class="region"><div class="contents">
+<p class="p">Программное обеспечение <span class="app">ГИС-Платформа</span> использует стандартную библиотеку <span class="link"><a href="http://www.gnu.org/software/gettext/" title="http://www.gnu.org/software/gettext/">gettext</a></span> для интернационализации (локализации). Выбрать язык интерфейса ПО можно в списке доступных языков (см. <span class="link"><a href="preferences.html#run_settings" title="5.2.4. Вкладка Настройки запуска">5.2.4. Вкладка <span class="gui">Настройки запуска</span></a></span>). В данный момент реализована поддержка русского, английского и французского языков.</p>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h3><span class="title">Пример работы ПО с английским языком интерфейса</span></h3></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_common/win_without_map_eng.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h3><span class="title">Пример работы ПО с русским языком интерфейса</span></h3></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_common/win_without_map.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<div class="figure"><div class="inner">
+<a href="#" class="zoom" data-zoom-in-title="View images at normal size" data-zoom-out-title="Scale images down"></a><div class="title title-figure"><h3><span class="title">Пример работы ПО с французским языком интерфейса</span></h3></div>
+<div class="region"><div class="contents"><div class="media media-image"><div class="inner"><img src="figures_common/win_without_map_fr.png" class="media media-block" alt=""></div></div></div></div>
+</div></div>
+<div class="note note-warning" title="Warning"><div class="inner"><div class="region"><div class="contents"><p class="p">Для корректного отображения подписей стандартных виджетов <span class="app">Gtk+</span> (например, подпись к кнопке <span class="gui">Выход</span>, см. <span class="link"><a href="preferences.html#quit" title="5.6. Страница настроек Выход">5.6. Страница настроек <span class="gui">Выход</span></a></span>) должны быть установлены соответствующие файлы локализации библиотеки <span class="app">Gtk+</span>.</p></div></div></div></div>
+</div></div>
+</div></div>
+<div class="sect sect-links" role="navigation">
+<div class="hgroup"></div>
+<div class="contents"><div class="links guidelinks"><div class="inner">
+<div class="title"><h2><span class="title">More Information</span></h2></div>
+<div class="region"><ul><li class="links "><a href="index.html" title="ГИС-Платформа">ГИС-Платформа</a></li></ul></div>
+</div></div></div>
+</div>
+</div>
+<div class="clear"></div>
+</div>
+<div class="footer"></div>
+</div></body>
+</html>
